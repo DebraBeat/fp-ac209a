@@ -1,5 +1,26 @@
-datashare/
-datashare.zip
-Data2024.xlsx - Monthly.csv
+# ---- data: lives in the shared Google Drive folder, never in git ----
+Data/*
+!Data/README.md
+data_clean/
+209_ms2_outputs/
+datashare*
+*.parquet
+*.zip
+Data20*.csv
 F-F_Research_Data_5_Factors_2x3_CSV/
 F-F_Research_Data_5_Factors_2x3_CSV.zip
+
+# ---- python / jupyter ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.jupyter/
+
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

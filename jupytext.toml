@@ -1,0 +1,7 @@
+# Pair every notebook with a .py twin in the "percent" format, so diffs/reviews happen on the .py.
+# `jupytext --sync Notebook/*.ipynb` updates whichever side is older. Jupyter (with jupytext installed)
+# does it automatically on save.
+formats = "ipynb,py:percent"
+# Drop per-run Colab/Jupyter cell metadata (executionInfo, outputId, ...) so the .py only changes when content does.
+cell_metadata_filter = "-all"
+notebook_metadata_filter = "-widgets,-colab,-language_info"

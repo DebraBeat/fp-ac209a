@@ -1,0 +1,11 @@
+# Python 3.11+ (the MS2 notebook was last run on 3.13)
+numpy
+pandas
+pyarrow            # parquet read/write
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+jupyterlab
+ipykernel
+jupytext           # pairs .ipynb <-> .py (see jupytext.toml and README)
