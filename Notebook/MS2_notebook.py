@@ -62,8 +62,9 @@ try:
     drive.mount('/content/drive')
     DATA = '/content/drive/MyDrive/final_project'          # raw data
     OUT  = '/content/drive/MyDrive/209_ms2_outputs'        # cleaned tables -> your own Drive (survives runtime resets)
-except ImportError:                                         # running locally (not Colab)
-    DATA, OUT = os.path.join('.', 'Data'), 'data_clean'
+except ImportError:                                         # running locally (not Colab): repo layout is <root>/Data, <root>/Notebook
+    ROOT = os.path.abspath('..' if os.path.basename(os.getcwd()) == 'Notebook' else '.')
+    DATA, OUT = os.path.join(ROOT, 'Data'), os.path.join(ROOT, 'data_clean')
 assert os.path.isdir(DATA), f'{DATA} not found (Colab: add final_project as a shortcut to My Drive; locally: put the data in ./Data)'
 os.makedirs(OUT, exist_ok=True)
 RNG = np.random.default_rng(1090)
